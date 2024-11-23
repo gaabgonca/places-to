@@ -1,19 +1,21 @@
-import { sql } from "@vercel/postgres";
+import { neon } from '@neondatabase/serverless';
 
 export async function POST(req) {
   const {
     userTwitter,
-    suggestedBook,
     parkName,
     city,
     parkDescription,
     safety
   } = await req.json();  // Retrieve the request body
 
+
+  const sql = neon(`${process.env.DATABASE_URL}`);  // Connect to the database
+
   try {
     await sql`
-      INSERT INTO places_to_read (user_twitter, suggested_book, park_name, city, park_description, safety)
-      VALUES (${userTwitter}, ${suggestedBook}, ${parkName}, ${city}, ${parkDescription}, ${safety})
+      INSERT INTO places_to_read (user_twitter, park_name, city, park_description, safety)
+      VALUES (${userTwitter}, ${parkName}, ${city}, ${parkDescription}, ${safety})
     `;
     return new Response(JSON.stringify({ message: "Place submitted successfully" }), { status: 200 });
   } catch (error) {
@@ -21,5 +23,3 @@ export async function POST(req) {
     return new Response(JSON.stringify({ message: "Error submitting place" }), { status: 500 });
   }
 }
-
-export const allowedMethods = ['POST']; // Optional: Specify allowed methods if needed.

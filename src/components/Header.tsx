@@ -3,7 +3,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import Link from "@/components/Link";
 import Button from "@/components/Button";
 import Arrow from "@/components/Arrow";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const Field = ({ label, name, type, placeholder, textArea, id, selectOptions, ...props }) => {
@@ -45,12 +45,10 @@ export default function Header() {
     }));
   };
 
-  const [inputs, setInputs] = React.useState({
+  const [inputs, setInputs] = useState({
     userTwitter: "",
-    suggestedBook: "",
     parkName: "",
     city: "",
-    country: "",
     parkDescription: "",
     safety: "",
   });

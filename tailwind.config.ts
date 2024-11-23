@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        mcqueen: "#267E5C",
+        sally: "#B0D9C8",
       },
     },
   },

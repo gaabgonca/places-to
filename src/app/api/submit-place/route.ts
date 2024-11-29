@@ -1,6 +1,7 @@
 import { neon } from '@neondatabase/serverless';
+import { NextRequest } from 'next/server';
 
-export async function POST(req) {
+export async function POST(req : NextRequest) {
   const {
     userInstagram,
     parkName,

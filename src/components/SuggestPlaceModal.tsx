@@ -14,7 +14,7 @@ export default function SuggestPlaceModal({ isOpen, onClose }: SuggestPlaceModal
     parkName: "",
     city: "",
     parkDescription: "",
-    safety: "",
+    safety: "Muy Seguro",
   });
 
   const [submitted, setSubmitted] = useState(false);

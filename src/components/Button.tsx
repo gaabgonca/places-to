@@ -1,6 +1,10 @@
 import React from "react";
 
-const Button = React.forwardRef(({ children, ...props }, forwardRef) => {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ children, ...props }, forwardRef) => {
   return (
     <button
       ref={forwardRef}

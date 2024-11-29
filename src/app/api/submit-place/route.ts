@@ -2,7 +2,7 @@ import { neon } from '@neondatabase/serverless';
 
 export async function POST(req) {
   const {
-    userTwitter,
+    userInstagram,
     parkName,
     city,
     parkDescription,
@@ -14,8 +14,8 @@ export async function POST(req) {
 
   try {
     await sql`
-      INSERT INTO places_to_read (user_twitter, park_name, city, park_description, safety)
-      VALUES (${userTwitter}, ${parkName}, ${city}, ${parkDescription}, ${safety})
+      INSERT INTO places_to_read (user_instagram, park_name, city, park_description, safety)
+      VALUES (${userInstagram}, ${parkName}, ${city}, ${parkDescription}, ${safety})
     `;
     return new Response(JSON.stringify({ message: "Place submitted successfully" }), { status: 200 });
   } catch (error) {

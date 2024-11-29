@@ -2,6 +2,7 @@
 
 import { google } from "googleapis";
 import ParksList from "@/components/ParksList";
+import ModalTrigger from "@/components/ModalTrigger";
 
 export default async function Page() {
   const privateKey = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n");
@@ -38,6 +39,7 @@ export default async function Page() {
   return (
     <div className="w-full h-full">
       <ParksList parks={parks} />
+      <ModalTrigger />
     </div>
   );
 }

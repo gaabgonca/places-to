@@ -60,7 +60,7 @@ export default function ParksList({ parks }: ParksListProps) {
                 <p>{description}</p>
                 <div className="flex leading-none gap-x-10">
                   <div>
-                    <h3 className="text-sm mb-1.5">Submitted by</h3>
+                    <h3 className="text-sm mb-1.5">Sugerido por</h3>
                     {submittedByHandle ? (
                       <Link
                         href={submittedByLink}
@@ -107,7 +107,7 @@ export default function ParksList({ parks }: ParksListProps) {
               <span>
                 {city}
               </span>
-              <span>{safety}</span>
+              <span>{"Seguridad: "+safety}</span>
             </div>
             <div className="ml-auto transition-transform duration-300 group-data-[state='open']:rotate-90">
               <Arrow />
@@ -120,7 +120,7 @@ export default function ParksList({ parks }: ParksListProps) {
                 <p className="max-w-prose">{description}</p>
                 <div className="flex flex-col mt-8 items-baseline leading-none bg-mcqueen/5 text-sm -mx-4 divide-y divide-mcqueen border-t border-mcqueen">
                   <div className="w-full py-3 flex flex-row justify-between px-4">
-                    <h3>Submitted by</h3>
+                    <h3>Sugerido por</h3>
                     {submittedByHandle ? (
                       <Link
                         href={submittedByLink}
@@ -134,7 +134,7 @@ export default function ParksList({ parks }: ParksListProps) {
                     )}
                   </div>
                   <div className="w-full py-3 flex flex-row justify-between px-4">
-                    <h3>Directions</h3>
+                    <h3>Ubicación</h3>
                     <Link
                       href={locationLink}
                       isExternal
@@ -159,7 +159,7 @@ export default function ParksList({ parks }: ParksListProps) {
           <MagnifyingGlass className="w-5 h-5 text-mcqueen/60 absolute top-1/2 left-4 -translate-y-1/2 pointer-events-none" />
           <input
             type="text"
-            placeholder="Search for parks..."
+            placeholder="Buscar lugares..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full h-full outline-none placeholder:text-mcqueen/60 bg-transparent pr-4 pl-16 sm:pl-12 py-4 sm:py-2.5"
@@ -193,7 +193,7 @@ export default function ParksList({ parks }: ParksListProps) {
             <div className="grid w-full h-full px-4 grid-cols-yeah col-divider" />
           </div>
         </div>
-        <div className="absolute grid w-full px-4 -translate-x-1/2 left-1/2 grid-cols-yeah col-divider h-fill-available" />
+        <div className="absolute grid w-full px-4 -translate-x-1/2 left-1/2 grid-cols-yeah col-divider" />
       </div>
       </>
   );

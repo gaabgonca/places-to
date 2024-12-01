@@ -45,9 +45,9 @@ export default function Header({ onOpenModal }: HeaderProps) {
           <Link href="/">Lugares para parcharse y ver el atardecer</Link>
         </h1>
         <p className="max-w-md mt-1">
-         Lugares en Colombia idoneos para parcharse y ver el atardecer. Sugeridos por la comunidad y gestionados por{" "}
+         Lugares especiales en Colombia para parcharse y ver el atardecer. Sugeridos por la comunidad y gestionados por{" "}
           <Link
-            href="https://instagram.com/typicalmitul"
+            href="https://instagram.com/gabrielg97"
             isExternal
             className="underline w-fit"
           >

@@ -9,7 +9,7 @@ export default function ModalTrigger() {
   return (
     <>
       <p className="text-center mt-4 z-30">
-        No tenemos muchos lugares todavía,{" "}
+        No tenemos muchos lugares todavía,{" "}<br/>
         <span
           className="underline cursor-pointer pointer-events-auto z-40"
           onClick={() => setModalOpen(true)}

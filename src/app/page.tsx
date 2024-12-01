@@ -5,7 +5,7 @@ import ParksList from "@/components/ParksList";
 import ModalTrigger from "@/components/ModalTrigger";
 
 export default async function Page() {
-  const privateKey = process.env.GOOGLE_PRIVATE_KE?.replace(/\\n/g, "\n") || "";
+  const privateKey = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n");
   const auth = await google.auth.getClient({
     scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
     projectId: process.env.GOOGLE_PROJECT_ID,
